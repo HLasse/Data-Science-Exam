@@ -1,15 +1,14 @@
 """
+The code for running training the autoencoder.
 
+Activate correct environment
 srun --mem=64g --gres=gpu:1 -p gpu --pty /bin/bash
 conda activate tf-gpu15
 python
 
-
+Example
 python autoencoder.py -f 1 -cl 2 -d True
 
-srun --mem=64g --pty /bin/bash
-conda activate tf-gpu15
-python
 """
 import os
 import argparse
