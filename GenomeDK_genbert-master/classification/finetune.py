@@ -1,21 +1,11 @@
 """
+Code for training the classification network. With and without autoencoder.
+
+Activate the correct environment:
 quit()
 srun --mem=64g --pty /bin/bash
 conda activate tf-gpu15
 python
-
-# load model
-new_model = tf.keras.models.load_model('saved_model/my_model')
-# Check its architecture
-new_model.summary()
-
-# add new top - you need ot fix how much to remove
-model = Sequential()
-for layer in new_model.layers[:-1]: # go through until last layer
-    model.add(layer)
-model.add(Dense(3, activation='softmax'))
-model.summary()
-model.compile(optimizer='adam', loss='categorical_crossentropy')
 """
 import os
 from pathlib import Path
